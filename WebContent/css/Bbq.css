@@ -1,0 +1,80 @@
+@charset "UTF-8";
+#flush_success {
+    width: 100%;
+    padding-top: 28px;
+    padding-left: 2%;
+    padding-bottom: 28px;
+    margin-bottom: 15px;
+    color: #155724;
+    background-color: #d4edda;
+}
+h1 {
+    text-align: center;
+    padding: 10px;
+    margin: 40px;
+    color: #FFFFFF;
+    background: #4d4d4d; /*背景色*/
+}
+
+p {
+    text-align: center;
+    padding: 3px;
+    margin: 2px;
+    color: #0b1707;
+    background: #ffffff; /*背景色*/
+}
+
+label, input[type='checkbox'] {
+    cursor: grab;
+}
+
+input {
+    background-color: #ffffb0;
+    border: 1px solid;
+    border-color: orange;
+    transition: border 0.2s ease-out;
+    color: inherit; /* 文字色を親から継承 */
+    height: 60px; /* 任意の高さ */
+    outline: 0; /*inputのフォーカス時の枠線を消す*/
+    vertical-align: middle ;
+
+}
+
+.button {
+    text-align: center;
+    display: inline-block;
+    border-radius: 6%; /* 角丸       */
+    font-size: 30pt; /* 文字サイズ */
+    /* text-align: center; /* 文字位置   */
+    cursor: pointer; /* カーソル   */
+    padding: 6px 6px; /* 余白       */
+    background: #007fff; /* 背景色     */
+    color: #ffffff; /* 文字色     */
+    line-height: 1em; /* 1行の高さ  */
+    transition: all 1s ease-out; /* なめらか変化 */
+    box-shadow: 7px 7px 3px #666666; /* 影の設定 */
+    /* border: 9px solid #000066; 枠の指定 */
+}
+
+label {
+    display: inline-block;
+    text-align: right;
+    width: 80px;
+    table#employee_list th {
+    width: 30%;
+    padding: 10px 2%;
+}
+table#tool_List th {
+    width: 30%;
+    padding: 10px 2%;
+}
+table#tool_List td {
+    width: 29%;
+    padding: 10px 2%;
+}
+tr.row1 {
+        background-color: #f2f2f2;
+}
+tr.row0 {
+        background-color: #ffffff;
+}
