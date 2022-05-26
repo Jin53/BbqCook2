@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="css/Bbq.css">
 <c:import url="layout/app.jsp">
 <c:param name="content">
-    <h1>選択画面</h1>
+    <h2>選択画面</h2>
         <form action="<%= request.getContextPath() %>/ToolSelection" method="GET">
              <p><input type="submit" name="tool"
                 value="道具選択へ" class= "button"></p>

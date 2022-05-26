@@ -12,14 +12,15 @@
                 <tr>
                     <th>食材ID</th>
                     <th>食材名前</th>
+                    <th></th>
                 </tr>
                 <c:forEach var="allFood" items="${allFood}" varStatus="status">
                     <tr class="row${status.count % 2}">
-                   <td> <a href="${pageContext.request.contextPath}/FoodEdit?id=${allFood.food_id}">
+                   <td> <a href="${pageContext.request.contextPath}/FoodEdit?food_id=${allFood.food_id}">
                         <c:out value="${allFood.food_id}" />
                         </a></td>
                         <td><c:out value="${allFood.food_name}" /></td>
-                        <td>
+                        <td><img src="/BbqCook2/upload/${allFood.food_image}"/></td>
                     </tr>
                 </c:forEach>
             </tbody>

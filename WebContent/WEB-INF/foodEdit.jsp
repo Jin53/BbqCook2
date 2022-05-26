@@ -2,13 +2,15 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-<h1>id : ${foodEdit.tool_id} の編集</h1>
+<h1>id : ${foodEdit.food_id} の編集</h1>
 
 <form method="POST"
-    action="${pageContext.request.contextPath}/FoodUpdate">
+    action="${pageContext.request.contextPath}/FoodUpdate" enctype="multipart/form-data">
     <label>食材名<br /> <input type="text" name="foodName"
         value="${foodEdit.food_name}" />
-    </label> <br /> <input type="hidden" name="_token" value="${_token}" />
+    </label> <br />
+    <label>画像<input type="file" name="pict" accept="image/*"></label>
+     <input type="hidden" name="_token" value="${_token}" />
     <button type="submit">編集</button>
 </form>
 

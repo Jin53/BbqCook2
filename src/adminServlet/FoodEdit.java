@@ -25,7 +25,6 @@ public class FoodEdit extends HttpServlet {
      */
     public FoodEdit() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

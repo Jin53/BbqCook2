@@ -1,6 +1,8 @@
 package adminServlet;
 
+import java.io.File;
 import java.io.IOException;
+import java.nio.file.Paths;
 
 import javax.persistence.EntityManager;
 import javax.servlet.RequestDispatcher;
@@ -9,6 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
 
 import entity.Tool;
 import util.DBUtil;
@@ -40,8 +43,14 @@ public class ToolRegister extends HttpServlet {
             Tool t = new Tool();
             String toolName = request.getParameter("registTool");
             t.setTool_name(toolName);
-            int s = (Integer) em.createQuery("select max(tool_id) from Tool").getSingleResult();
-            t.setTool_id(s + 1);
+            //画像アップロード
+            Part part = request.getPart("toolpict");
+            System.out.println("part"+part);
+            String toolfilename = Paths.get(part.getSubmittedFileName()).getFileName().toString();
+            String path = getServletContext().getRealPath("/upload");
+            System.out.println(path);
+            part.write(path + File.separator + toolfilename);
+            t.setTool_image(toolfilename);
             em.getTransaction().begin();
             em.persist(t);
             em.getTransaction().commit();

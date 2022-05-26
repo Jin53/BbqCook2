@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +9,10 @@
 <link rel="stylesheet" type="text/css" media="all" href="css/Bbq.css">
 </head>
 <body>
-    <h1>Top画面</h1>
+    <h1>BBQ料理サーチシステム</h1>
+    <img class="top"
+     src="https://cdn.pixabay.com/photo/2015/05/31/12/23/fool-791504_1280.jpg"
+     >
     <form action="<%=request.getContextPath()%>/UserLogin" method="get">
         <p>
             <input type="submit" value=ユーザーログイン class="button">

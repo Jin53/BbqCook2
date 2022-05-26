@@ -10,6 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import entity.Food;
 import util.DBUtil;
@@ -51,7 +52,8 @@ public class RegisterAllFood extends HttpServlet {
                 .getSingleResult();
 
         em.close();
-        request.setAttribute("allFood", allFood);
+        HttpSession session = request.getSession();
+        session.setAttribute("allFood", allFood);
         request.setAttribute("food_count", food_count);
         request.setAttribute("page", page);
         request.setAttribute("_token", request.getSession().getId());

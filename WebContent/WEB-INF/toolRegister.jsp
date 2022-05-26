@@ -11,9 +11,10 @@
     <form method="POST" action="<%=request.getContextPath()%>/ToolRegister" enctype="multipart/form-data">
         <h1>新規道具登録</h1>
         <label for="toolregister">登録道具： </label>
-        <input type="text" id="toolregister" name="registTool">
+        <input type="text" id="toolregister" name="registTool"><br>
+        <label for="toolpict">道具写真： </label>
+        <input type="file" id="toolpict" name="toolpict" accept="image/*"><br>
         <input type="hidden" name="_token" value="${_token}" />
-        <input type="file" name="pict"><br>
         <button type="submit">登録</button>
     </form>
     <form method="GET"

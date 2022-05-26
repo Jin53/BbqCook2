@@ -53,10 +53,9 @@ public class FoodRegister extends HttpServlet {
         if (_token != null && _token.equals(request.getSession().getId())) {
             EntityManager em = DBUtil.createEntityManager();
             Food f = new Food();
-            String foodName = request.getParameter("registerFood");
+            String foodName = request.getParameter("registFood");
             f.setFood_name(foodName);
-            int s = (Integer) em.createQuery("select max(food_id) from Food").getSingleResult();
-            f.setFood_id(s + 1);
+            //画像アップロード
             Part part = request.getPart("pict");
             System.out.println("part"+part);
             String filename = Paths.get(part.getSubmittedFileName()).getFileName().toString();

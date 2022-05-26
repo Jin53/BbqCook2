@@ -33,6 +33,17 @@ public class Tool {
     @Column(name = "Tool_name")
     private String tool_name;
 
+    @Column(name = "Tool_image")
+    private String tool_image;
+
+    public String getTool_image() {
+        return tool_image;
+    }
+
+    public void setTool_image(String tool_image) {
+        this.tool_image = tool_image;
+    }
+
     public Integer getTool_id() {
         return tool_id;
     }

@@ -3,12 +3,12 @@
 <html lang="ja">
     <head>
         <meta charset="UTF-8">
-        <title>メッセージボード</title>
+        <title>BBQ料理リスト</title>
     </head>
     <body>
         <div id="wrapper">
             <div id="header">
-
+                <h1>BBQ料理サーチシステム</h1>
             </div>
             <div id="content">
                 ${param.content}

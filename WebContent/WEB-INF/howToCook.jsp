@@ -13,7 +13,7 @@
 <c:forEach var="cookMake" items="${cook_make}">
     <c:out value="${cookMake.getCook_make()}" />
 </c:forEach>
-<form action="${pageContext.request.contextPath}/RegisterSelection" method="get">
+<form action="${pageContext.request.contextPath}/UserLogin" method="get">
      <input type="hidden" name="_token" value="${_token}" />              
        <input type="submit" value="戻る">         
 </form>
