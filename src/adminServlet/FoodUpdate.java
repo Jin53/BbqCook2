@@ -1,6 +1,8 @@
 package adminServlet;
 
+import java.io.File;
 import java.io.IOException;
+import java.nio.file.Paths;
 
 import javax.persistence.EntityManager;
 import javax.servlet.RequestDispatcher;
@@ -9,6 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
 
 import entity.Food;
 import util.DBUtil;
@@ -33,6 +36,13 @@ public class FoodUpdate extends HttpServlet {
                 String foodName = request.getParameter("foodName");
                 System.out.println(foodName);
                 f.setFood_name(foodName);
+                Part part = request.getPart("pict");
+                System.out.println("part"+part);
+                String filename = Paths.get(part.getSubmittedFileName()).getFileName().toString();
+                String path = getServletContext().getRealPath("/upload");
+                System.out.println(path);
+                part.write(path + File.separator + filename);
+                f.setFood_image(filename);
 
                 em.getTransaction().begin();
                 em.getTransaction().commit();
@@ -40,6 +50,7 @@ public class FoodUpdate extends HttpServlet {
                 // セッションスコープ上の不要になったデータを削除
                 request.getSession().removeAttribute("food_id");
                 request.setAttribute("foodName", foodName);
+                request.setAttribute("foodImage", filename);
                 request.setAttribute("_token", request.getSession().getId());
 
                 RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/foodUpdate.jsp");
