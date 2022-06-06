@@ -36,6 +36,7 @@ public class FoodUpdate extends HttpServlet {
                 String foodName = request.getParameter("foodName");
                 System.out.println(foodName);
                 f.setFood_name(foodName);
+                //画像をアップロード
                 Part part = request.getPart("pict");
                 System.out.println("part"+part);
                 String filename = Paths.get(part.getSubmittedFileName()).getFileName().toString();

@@ -9,7 +9,14 @@
         <p>現在、持っているBBQ道具を選択してください。</p>
         <form action="<%= request.getContextPath() %>/FoodBudget" method="get">
             <c:forEach varStatus="loop" var="tools" items="${tool}">
-                <input type="checkbox" name="tool" value="${loop.index + 1}">${tools.tool_name}
+
+                <!--  <div class="toolSelection">-->
+
+                <label for="toolList" class="toolListImg">
+                    <img src="/BbqCook2/upload/${tools.tool_image}" id="toolList" alt="BBQ道具">
+                    <input type="checkbox" id="toolList" name="tool" value="${loop.index + 1}">${tools.tool_name}
+                </label>
+
             <%-- <c:out value="${tools.tool_id}"/> --%>
                 <%-- <c:out value="${tools.tool_name}"/> --%>
                 <br>

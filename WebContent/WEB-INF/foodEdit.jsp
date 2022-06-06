@@ -18,7 +18,7 @@
     <a href="${pageContext.request.contextPath}/RegisterAllFood">一覧に戻る</a>
 </p>
 <p>
-    <a href="#" onclick="confirmDestroy();">この道具を削除する</a>
+    <a href="#" onclick="confirmDestroy();">この食材を削除する</a>
 </p>
   <form method="POST" action="${pageContext.request.contextPath}/FoodDestroy">
             <input type="hidden" name="_token" value="${_token}" />

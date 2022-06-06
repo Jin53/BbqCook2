@@ -7,6 +7,7 @@ import java.nio.file.Paths;
 import javax.persistence.EntityManager;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -20,6 +21,7 @@ import util.DBUtil;
  * Servlet implementation class ToolRegister
  */
 @WebServlet("/ToolRegister")
+@MultipartConfig
 public class ToolRegister extends HttpServlet {
     private static final long serialVersionUID = 1L;
 

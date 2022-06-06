@@ -8,6 +8,7 @@
         <tr>
             <th>道具ID</th>
             <th>道具名前</th>
+            <th>道具画像</th>
         </tr>
         <c:forEach var="allTool" items="${allTool}" varStatus="status">
             <tr class="row${status.count % 2}">
@@ -17,7 +18,9 @@
                             value="${allTool.tool_id}" />
                 </a></td>
                 <td><c:out value="${allTool.tool_name}" /></td>
-                <td>
+                <div class="allToolimage">
+                <td><img src="/BbqCook2/upload/${allTool.tool_image}"/><td>
+                </div>
             </tr>
         </c:forEach>
     </tbody>

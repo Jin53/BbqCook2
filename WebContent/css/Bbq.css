@@ -1,5 +1,9 @@
 @charset "UTF-8";
+.allToolimage {
+    width: 50%;
+    border-image-source: repeating-linear-gradient(45deg, #aaa 0, #aaa 3px, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 6px);
 
+}
 .button {
   align: center;
   background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
@@ -22,6 +26,11 @@
   touch-action: manipulation;
   white-space: nowrap;
   cursor: pointer;
+}
+div.toolListImg {
+    width: 30%;
+    height: 30%;
+
 }
 
 
@@ -57,11 +66,17 @@ h2 {
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.56);
   justify-content: center;
 }
+.toolSelection{
+
+
+}
+.toolSelectionImg{
+     width: 300px;
+     heigt: 200px;
+    float:  left;
+}
 img {
-    width:auto;
-    height:auto;
-    max-width:100%;
-    max-height:100%;
+    width:300px;
 }
 p {
     text-align: center;
@@ -72,27 +87,21 @@ p {
     background: #ffffff; /*背景色*/
 }
 
-label, input[type='checkbox'] {
+input:checked + label img {
+    border: 2px solid red;
     cursor: grab;
 }
 
 input {
-    background-color: #ffffb0;
-    border: 1px solid;
-    border-color: orange;
-    transition: border 0.2s ease-out;
-    color: inherit; /* 文字色を親から継承 */
-    height: 60px; /* 任意の高さ */
-    outline: 0; /*inputのフォーカス時の枠線を消す*/
-    vertical-align: middle ;
 
 }
 
 
 label {
     display: inline-block;
-    text-align: right;
-    width: 80px;
+    box-sizing: border-box;
+    text-align: left;
+    width: 300px;
     table#employee_list th {
     width: 30%;
     padding: 10px 2%;
@@ -105,6 +114,7 @@ table#tool_List td {
     width: 29%;
     padding: 10px 2%;
 }
+
 tr.row1 {
         background-color: #f2f2f2;
 }

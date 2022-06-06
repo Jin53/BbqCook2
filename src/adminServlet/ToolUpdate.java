@@ -1,19 +1,24 @@
 package adminServlet;
 
+import java.io.File;
 import java.io.IOException;
+import java.nio.file.Paths;
 
 import javax.persistence.EntityManager;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
 
 import entity.Tool;
 import util.DBUtil;
 
 @WebServlet("/ToolUpdate")
+@MultipartConfig
 public class ToolUpdate extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
@@ -34,13 +39,17 @@ public class ToolUpdate extends HttpServlet {
             String toolName = request.getParameter("toolName");
             System.out.println(toolName);
             t.setTool_name(toolName);
-
+            Part part = request.getPart("pict");
+            String filename = Paths.get(part.getSubmittedFileName()).getFileName().toString();
+            String path = getServletContext().getRealPath("/upload");
+            part.write(path + File.separator + filename);
+            t.setTool_image(filename);
             em.getTransaction().begin();
             em.getTransaction().commit();
             em.close();
             // セッションスコープ上の不要になったデータを削除
             request.getSession().removeAttribute("tool_id");
-            request.setAttribute("toolName", toolName);
+            request.setAttribute("tool", t);
             request.setAttribute("_token", request.getSession().getId());
 
             RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/toolUpdate.jsp");

@@ -11,8 +11,8 @@
 </head>
 <body>
     <h1>登録道具名変更</h1>
-
-    <c:out value="${toolName}に変更しました。" />
+    <img src="/BbqCook2/upload/${tool.tool_image}"/>
+    <c:out value="${tool.tool_name}に変更しました。" />
 
     <a  href="${pageContext.request.contextPath}/RegisterAllTool?_token=${_token}">一覧に戻る</a>
 

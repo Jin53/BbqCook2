@@ -5,10 +5,11 @@
 <h1>id : ${toolEdit.tool_id} の編集</h1>
 
 <form method="POST"
-    action="${pageContext.request.contextPath}/ToolUpdate">
-    <label>道具名<br /> <input type="text" name="toolName"
-        value="${toolEdit.tool_name}" />
-    </label> <br /> <input type="hidden" name="_token" value="${_token}" />
+    action="${pageContext.request.contextPath}/ToolUpdate" enctype="multipart/form-data">
+    <label>道具名<br />
+    <input type="text" name="toolName" value="${toolEdit.tool_name}" /></label><br>
+    <label>画像<input type="file" name="pict" accept="image/*"></label>
+    <br /> <input type="hidden" name="_token" value="${_token}" />
     <button type="submit">編集</button>
 </form>
 

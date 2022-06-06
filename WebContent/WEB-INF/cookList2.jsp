@@ -13,10 +13,12 @@
 <c:if test="${!empty Cookname}"/>
 <c:forEach varStatus="loop" var="Cookname" items="${cook}">
 <input type="checkbox" name="cookname" value="${Cookname.getCook_id()}">${Cookname.getCook_name()}
+<img src="/BbqCook2/upload/${cookTool.tool_image}">
 </c:forEach>
 <c:if test="${!empty CooknameTool}"/>
-<c:forEach varStatus="loop" var="CooknameTool" items="${cookTool}">
-<input type="checkbox" name="cookname" value="${CooknameTool.getCook_id()}">${CooknameTool.getCook_name()}
+<c:forEach varStatus="loop" var="cookTool" items="${cookTool}">
+<input type="checkbox" name="cookname" value="${cookTool.getCook_id()}">${cookTool.getCook_name()}
+<img src="/BbqCook2/upload/${cookTool.tool_image}">
 </c:forEach>
 <!--<c:forEach var="CooknameT" items="${cookTool}">
 <c:out value="${CooknameT.getCook_name()}"/>
