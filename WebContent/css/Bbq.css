@@ -1,40 +1,58 @@
 @charset "UTF-8";
-.allToolimage {
-    width: 50%;
-    border-image-source: repeating-linear-gradient(45deg, #aaa 0, #aaa 3px, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 6px);
+img {
 
+    width: 100%;
 }
-.button {
-  align: center;
-  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
-  border: 0;
-  border-radius: 8px;
-  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
-  box-sizing: border-box;
-  color: #FFFFFF;
-  display: flex;
-  font-family: Phantomsans, sans-serif;
-  font-size: 20px;
-  justify-content: center;
-  line-height: 1em;
-  max-width: 100%;
-  min-width: 140px;
-  padding: 19px 24px;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  white-space: nowrap;
-  cursor: pointer;
+label {
+    display: inline-block;
+    cursor: pointer;
 }
-div.toolListImg {
+
+*
+/*p {
+    text-align: left;
+    align: center;
+    padding: 3px;
+    margin: 2px;
+    color: #0b1707;
+    background: #ffffff; /*背景色*/
+}
+/*p .buttonuser{
+    position: absolute;;
+    font-size: 1rem;
+    line-height: 50px;
+    width: 110px;
+    height: 110px;
+    padding: 0;
+    letter-spacing: 0;
+    color: #fff;
+    border-radius: 50%;
+    top: 13;
+    left: 6;
+    background: #d6249f;
+}*/
+/*p .buttonadmin{
+    position: absolute;;
+    font-size: 1rem;
+    line-height: 50px;
+    width: 110px;
+    height: 110px;
+    padding: 0;
+    letter-spacing: 0;
+    color: #fff;
+    border-radius: 50%;
+    background: #d6249f;
+    right:60px;
+    bottom: 30px;
+}
+*/
+
+.toolListImg {
     width: 30%;
-    height: 30%;
-
+    cursor: grab;
 }
 
-
-}#flush_success {
+#flush_success {
     width: 100%;
     padding-top: 28px;
     padding-left: 2%;
@@ -55,9 +73,9 @@ h1 {
 }
 h2 {
   text:algin:center;
+  argin-right:auto; margin-left:auto
   position: relative;
-  width: 120px;
-  height: 50 Rpx;
+  height: 50 px;
   padding: 0.2em 0.5em;
   background: -webkit-linear-gradient(to right, rgb(255, 124, 111), #ffc994);
   background: linear-gradient(to right, rgb(255, 124, 111), #ffc994);
@@ -66,58 +84,7 @@ h2 {
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.56);
   justify-content: center;
 }
-.toolSelection{
-
-
-}
-.toolSelectionImg{
-     width: 300px;
-     heigt: 200px;
-    float:  left;
-}
-img {
-    width:300px;
-}
-p {
-    text-align: center;
-    align: center;
-    padding: 3px;
-    margin: 2px;
-    color: #0b1707;
-    background: #ffffff; /*背景色*/
-}
-
-input:checked + label img {
-    border: 2px solid red;
-    cursor: grab;
-}
-
-input {
-
-}
-
-
-label {
-    display: inline-block;
-    box-sizing: border-box;
-    text-align: left;
-    width: 300px;
-    table#employee_list th {
-    width: 30%;
-    padding: 10px 2%;
-}
-table#tool_List th {
-    width: 30%;
-    padding: 10px 2%;
-}
-table#tool_List td {
-    width: 29%;
-    padding: 10px 2%;
-}
-
-tr.row1 {
-        background-color: #f2f2f2;
-}
-tr.row0 {
-        background-color: #ffffff;
+.userlogin{
+    padding:10px;
+    argin-right:auto; margin-left:auto
 }
