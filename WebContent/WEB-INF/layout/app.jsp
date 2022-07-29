@@ -11,7 +11,7 @@
         <div class="container" id="wrapper">
             <div class="row">
                 <div id="header">
-                    <h1 class="col-12">BBQ料理<br class="d-md-none">サーチシステム</h1>
+                   <!--   <h1 class="col-12">BBQ料理<br class="d-md-none">サーチシステム</h1>-->
                 </div>
                 <div id="content">
                     ${param.content}

@@ -1,11 +1,19 @@
 @charset "UTF-8";
 img {
-
-    width: 100%;
+    width: 400px;
 }
 label {
     display: inline-block;
     cursor: pointer;
+}
+.form-check-label{
+    width: 100%;
+}
+.cardname{
+    text-align: center;
+}
+.form-check-input{
+margin-left:1rem;
 }
 
 *
