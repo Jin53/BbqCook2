@@ -8,7 +8,7 @@
                     <form action="<%=request.getContextPath()%>/FoodBudget" method="get">
                         <div class="row">
                             <c:forEach var="tools" items="${tool}" varStatus="loop">
-                                  <div class="col-md-4 mb-4">
+                                <div class="col-md-4 mb-4">
                                       <div class="card">
                                         <label class="form-check-label" for="toolList${loop.index}">
                                             <input type="checkbox" class="form-check-input" id="toolList${loop.index}" name="tool" value="${loop.index + 1}">
@@ -20,10 +20,10 @@
                                             </div>
                                         </label>
                                       </div>
-                                  </div>
+                                </div>
                             </c:forEach>
                         </div>
-                       <input class="col-5 btn btn-primary" type="submit"/>
+                   <input class="col-6 offset-3 btn-lg btn btn-primary" type="submit" value="選択"/>
                    </form>
     </c:param>
 </c:import>
